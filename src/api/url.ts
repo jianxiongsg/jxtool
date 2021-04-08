@@ -17,7 +17,7 @@ let isURL = function (str) {
  * 获取url各种信息
  * @param url 需要解析的url
 */
-let getUrlInfo = function (url:string) {
+let getUrlInfo = function (url?:string) {
     try {
         url = url || location.href;
         var matches = url.match(URL_REG);
@@ -48,7 +48,7 @@ let getUrlInfo = function (url:string) {
  * 获取url所有参数
  * @param url 需要解析的url
 */
-let getHrefParamAll = function (url:string) {
+let getHrefParamAll = function (url?:string) {
     try {
         url = url || location.href;
         if (!isURL(url)) {

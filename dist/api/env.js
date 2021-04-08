@@ -3,12 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 let isIOS = false;
 let isIphoneX = false;
 let initedipx = false;
+let isAnd = false;
 let statusBarHeight = 30;
 let bottomBarHeight = 0;
 function initCheckIpx() {
     initedipx = true;
     isIOS = Boolean(navigator.userAgent.match(/(iphone|ipod|ipad)/i));
-    const isAndroid = Boolean(navigator.userAgent.match(/android/i));
+    isAnd = Boolean(navigator.userAgent.match(/android/i));
     let navBarHeight = 88;
     if (isIOS) {
         isIphoneX =
@@ -63,9 +64,16 @@ function isIPhoneX() {
     }
     return isIphoneX;
 }
+function isAndroid() {
+    if (!initedipx) {
+        initCheckIpx();
+    }
+    return isAnd;
+}
 exports.default = {
     getStatusBarHeight: getStatusBarHeight,
     getBottomBarHeight: getBottomBarHeight,
     isIos: isIos,
-    isIPhoneX: isIPhoneX
+    isIPhoneX: isIPhoneX,
+    isAndroid: isAndroid
 };

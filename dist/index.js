@@ -14,6 +14,7 @@ exports.default = {
     getBottomBarHeight: env_1.default.getBottomBarHeight,
     isIos: env_1.default.isIos,
     isIPhoneX: env_1.default.isIPhoneX,
+    isAndroid: env_1.default.isAndroid,
     shortNick: shortNick_1.default,
     getUrlInfo: url_1.default.getUrlInfo,
     getHrefParamAll: url_1.default.getHrefParamAll,

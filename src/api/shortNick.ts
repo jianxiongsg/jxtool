@@ -3,7 +3,7 @@
  * @param str 昵称
  * @param len 最大长度
 */
-function shortNick(str:string,len:number){
+function shortNick(str:string,len:number,insert:string="...",isCenter:boolean=false){
 
     if(str != null && str != undefined){
         const reg = /[\u4e00-\u9fa5]/g;
@@ -12,7 +12,10 @@ function shortNick(str:string,len:number){
         if(realLength <= len){
             return str;
         }
-        return str.substring(0,1)+ "**" + str.substring(str.length-1,str.length);
+        if(isCenter){
+            return str.substring(0,1)+ insert + str.substring(str.length-1,str.length);
+        }
+        return str.substring(0,len-1)+ insert;
     }
     return str;
 }

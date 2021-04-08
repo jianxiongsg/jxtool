@@ -5,7 +5,7 @@
 */
 declare function getHrefParam(name: string, url?: string): any;
 declare const _default: {
-    getUrlInfo: (url: string) => {
+    getUrlInfo: (url?: string) => {
         protocol: string;
         hostname: string;
         port: string;
@@ -14,7 +14,7 @@ declare const _default: {
         search: string;
         hash: string;
     };
-    getHrefParamAll: (url: string) => any;
+    getHrefParamAll: (url?: string) => any;
     getHrefParam: typeof getHrefParam;
 };
 export default _default;

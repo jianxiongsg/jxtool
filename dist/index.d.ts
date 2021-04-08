@@ -6,8 +6,9 @@ declare const _default: {
     getBottomBarHeight: () => number;
     isIos: () => boolean;
     isIPhoneX: () => boolean;
+    isAndroid: () => boolean;
     shortNick: typeof shortNick;
-    getUrlInfo: (url: string) => {
+    getUrlInfo: (url?: string) => {
         protocol: string;
         hostname: string;
         port: string;
@@ -16,7 +17,7 @@ declare const _default: {
         search: string;
         hash: string;
     };
-    getHrefParamAll: (url: string) => any;
+    getHrefParamAll: (url?: string) => any;
     getHrefParam: (name: string, url?: string) => any;
     getState: () => string;
     watch: (cb: (visibility: any) => void) => void;
