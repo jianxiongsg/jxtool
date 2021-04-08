@@ -3,6 +3,9 @@ import env from "./api/env";
 import shortNick from "./api/shortNick";
 import url from "./api/url";
 import visibility from "./api/visibility";
+import lockScroll from "./api/lockScroll";
+import store from "./api/store";
+import QueueFunc from "./api/queueFunc"; 
 
 
 export default {
@@ -17,5 +20,14 @@ export default {
     getHrefParamAll:url.getHrefParamAll,
     getHrefParam:url.getHrefParam,
     getState:visibility.getState,
-    watch:visibility.watch
+    watch:visibility.watch,
+    disableDodyScroll:lockScroll.disableDodyScroll,
+    enableBodyScroll:lockScroll.enableBodyScroll,
+    clearAllBodyScrollLocks:lockScroll.clearAllBodyScrollLocks,
+    lockScroll:lockScroll.lockScroll,
+    allowScroll:lockScroll.allowScroll,
+    setStorage:store.setStorage,
+    getStorage:store.getStorage,
+    QueueFunc:QueueFunc
 }
+
