@@ -1,5 +1,6 @@
 import ajax from "./api/ajax";
 import shortNick from "./api/shortNick";
+import QueueFunc from "./api/queueFunc";
 declare const _default: {
     ajax: typeof ajax;
     getStatusBarHeight: () => number;
@@ -21,5 +22,13 @@ declare const _default: {
     getHrefParam: (name: string, url?: string) => any;
     getState: () => string;
     watch: (cb: (visibility: any) => void) => void;
+    disableDodyScroll: (element?: HTMLElement) => void;
+    enableBodyScroll: (element?: HTMLElement) => void;
+    clearAllBodyScrollLocks: () => void;
+    lockScroll: (element: HTMLElement) => void;
+    allowScroll: (element: HTMLElement) => void;
+    setStorage: (key: string, item: string) => void;
+    getStorage: (key: string) => string;
+    QueueFunc: typeof QueueFunc;
 };
 export default _default;

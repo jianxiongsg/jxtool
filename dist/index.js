@@ -8,6 +8,9 @@ const env_1 = __importDefault(require("./api/env"));
 const shortNick_1 = __importDefault(require("./api/shortNick"));
 const url_1 = __importDefault(require("./api/url"));
 const visibility_1 = __importDefault(require("./api/visibility"));
+const lockScroll_1 = __importDefault(require("./api/lockScroll"));
+const store_1 = __importDefault(require("./api/store"));
+const queueFunc_1 = __importDefault(require("./api/queueFunc"));
 exports.default = {
     ajax: ajax_1.default,
     getStatusBarHeight: env_1.default.getStatusBarHeight,
@@ -20,5 +23,13 @@ exports.default = {
     getHrefParamAll: url_1.default.getHrefParamAll,
     getHrefParam: url_1.default.getHrefParam,
     getState: visibility_1.default.getState,
-    watch: visibility_1.default.watch
+    watch: visibility_1.default.watch,
+    disableDodyScroll: lockScroll_1.default.disableDodyScroll,
+    enableBodyScroll: lockScroll_1.default.enableBodyScroll,
+    clearAllBodyScrollLocks: lockScroll_1.default.clearAllBodyScrollLocks,
+    lockScroll: lockScroll_1.default.lockScroll,
+    allowScroll: lockScroll_1.default.allowScroll,
+    setStorage: store_1.default.setStorage,
+    getStorage: store_1.default.getStorage,
+    QueueFunc: queueFunc_1.default
 };
