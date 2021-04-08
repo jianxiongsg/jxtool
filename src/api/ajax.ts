@@ -1,14 +1,13 @@
-export interface AjaxParam{
+
+function ajax(options:{
     type:'get' | "post";
     url: string;
     data:any;
     header:{[type:string]:string};
     success:(result,xhr)=>void,
     error:(result,xhr)=>void
-
-}
-function ajax(options:AjaxParam){
-    let defaults:AjaxParam = {
+}){
+    let defaults = {
         type:'get',
         url:'',
         data:{},

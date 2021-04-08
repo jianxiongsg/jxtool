@@ -2,7 +2,8 @@ import ajax from "./api/ajax";
 import env from "./api/env";
 import shortNick from "./api/shortNick";
 import url from "./api/url";
-import visibility from "./api/visibility"
+import visibility from "./api/visibility";
+
 
 export default {
     ajax:ajax,
