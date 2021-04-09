@@ -5,7 +5,8 @@ import url from "./api/url";
 import visibility from "./api/visibility";
 import lockScroll from "./api/lockScroll";
 import store from "./api/store";
-import QueueFunc from "./api/queueFunc"; 
+import QueueFunc from "./api/queueFunc";
+import data from "./api/data";
 
 
 export default {
@@ -28,6 +29,8 @@ export default {
     allowScroll:lockScroll.allowScroll,
     setStorage:store.setStorage,
     getStorage:store.getStorage,
+    deepCopy:data.deepCopy,
+    formatString:data.formatString,
     QueueFunc:QueueFunc
 }
 

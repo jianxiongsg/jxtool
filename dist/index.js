@@ -11,6 +11,7 @@ const visibility_1 = __importDefault(require("./api/visibility"));
 const lockScroll_1 = __importDefault(require("./api/lockScroll"));
 const store_1 = __importDefault(require("./api/store"));
 const queueFunc_1 = __importDefault(require("./api/queueFunc"));
+const data_1 = __importDefault(require("./api/data"));
 exports.default = {
     ajax: ajax_1.default,
     getStatusBarHeight: env_1.default.getStatusBarHeight,
@@ -31,5 +32,7 @@ exports.default = {
     allowScroll: lockScroll_1.default.allowScroll,
     setStorage: store_1.default.setStorage,
     getStorage: store_1.default.getStorage,
+    deepCopy: data_1.default.deepCopy,
+    formatString: data_1.default.formatString,
     QueueFunc: queueFunc_1.default
 };

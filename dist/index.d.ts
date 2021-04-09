@@ -29,6 +29,8 @@ declare const _default: {
     allowScroll: (element: HTMLElement) => void;
     setStorage: (key: string, item: string) => void;
     getStorage: (key: string) => string;
+    deepCopy: (obj: any) => {};
+    formatString: (str: string, ...data: any[]) => string;
     QueueFunc: typeof QueueFunc;
 };
 export default _default;
